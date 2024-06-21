@@ -16,19 +16,19 @@ export default [
         img: "samai.jpg",
         cuisine: "Samai",
         price:"$7.25",
-        ingredients:""
+        ingredients:"buckwheat, millet, or maize flour, gundruk, spiced meat."
     },
     {
         img: "Thakali.jpg",
         cuisine: "Thakali Khana",
         price:"$7",
-        ingredients:"rice, lentil soup, gundruk, spiced meat, achar, leafy greens, and vegetable curries."
+        ingredients:"rice, lentil soup, gundruk, spiced meat, achar, and vegetables."
     },
     {
         img: "Sekuwa.jpg",
         cuisine: "Sekuwa",
         price:"$5",
-        ingredients:"skewered grilled meat with spices like cumin, coriander, turmeric, and chili."
+        ingredients:"skewered grilled meat with cumin, coriander, turmeric, and chili."
     },
     {
         img: "dhedo-Food.jpeg",
