@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "./data"
 
 function App() {
-  const [isHover, setHover] = useState(false)
+
   const [singleSelection, setSingleSelection] =useState(null)
 
   const handleSelect= (getCurrentId) =>{
@@ -24,17 +24,17 @@ function App() {
             </ul>
           </div>
         </header>
-        <div className="h-96 w-auto bg-[#CDE8E5] text-green-700 font-sora font-semibold text-6xl text-center pt-40">
-            <div className="items-center">Discover Our Menu</div>
+        <div className="lg:h-96 h-40 w-auto bg-[#CDE8E5] text-green-700 font-sora font-semibold lg:text-6xl text-3xl tracking-tighter text-center flex items-center justify-center">
+            <div>Discover Our Menu</div>
         </div>
       <div className="h-full grid gap-4 mx-5 mt-16 lg:grid-cols-4 text-green-700 items-center justify-center">
           {data.map(item=>{return(
           <div className={` shadow-xl rounded-xl lg:h-[500px] lg:w-80 h-[200px] w-96 lg:grid lg:grid-row-7 flex flex-col items-center
             ${singleSelection === item.id ? 'transition-colors hover:bg-[#7AB2B2] duration-500 ease-in-out' : 'bg-[#EEF7FF]'}`}
-          onMouseEnter={() => {setHover(true)
+          onMouseEnter={() => {
             handleSelect(item.id)
           } }
-            onMouseLeave={() => {setHover(false) 
+            onMouseLeave={() => { 
               setSingleSelection(null)
             }}>
               <p className="text-black self-start ml-4 mt-4 font-bold">{item.price}</p>
