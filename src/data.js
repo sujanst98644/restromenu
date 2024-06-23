@@ -1,6 +1,6 @@
 export default [
     {
-        img: `${process.env.PUBLIC_URL}/momo.jpg`,
+        img: `${process.env.PUBLIC_URL}/Momo.jpg`,
         cuisine: "Momo",
         price:"$1.5",
         ingredients:"chopped vegetables or ground meat, chilies, and cilantro.",
@@ -16,7 +16,7 @@ export default [
 
     },
     {
-        img: `${process.env.PUBLIC_URL}/samai.jpg`,
+        img: `${process.env.PUBLIC_URL}/Samai.jpg`,
         cuisine: "Samai",
         price:"$7.25",
         ingredients:"buckwheat, millet, or maize flour, gundruk, spiced meat.",
