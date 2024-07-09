@@ -1,11 +1,11 @@
 import { FaSearch } from "react-icons/fa";
 import React, { useContext, useState, useEffect } from "react";
 import UserContext from "./Context/UserContext";
-import { Link } from "react-router-dom";
+
 
 const Search = ()=>{
     const [Name, setName] = useState("");
-  const { setUser } = useContext(UserContext);
+    const { setUser } = useContext(UserContext);
 
   useEffect(() => setUser(Name), [Name, setUser]);
 

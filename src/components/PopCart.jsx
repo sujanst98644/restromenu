@@ -6,10 +6,11 @@ import { Link } from "react-router-dom";
 const Caret = () => {
   const { state } = useContext(UserContext);
   const { cart } = state;
+  console.log(cart)
   return (
-    <div className="text-black text-5xl fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center">
+    <div className="text-black text-2xl fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center">
       
-      <div className="w-1/3 h-2/3 bg-slate-500 rounded-xl">
+      <div className="lg:w-1/3 lg:h-2/3 h-1/2 w-4/5 bg-slate-500 rounded-xl">
       <Link to='/restromenu' className="rounded-full bottom-0 flex items-end justify-end">
           <GoX/>
       </Link>
@@ -29,11 +30,10 @@ const Caret = () => {
                 <button
                   className={`text-center transition duration-500 ease-in-out  border-2 bg-green-800 text-white rounded-xl px-4 py-2`}
                 >
-                  Order Online
+                  Order
                 </button>
                 <div className="space-x-3">
-                  <button>More</button>
-                  <button>Add order</button>
+                  <button>Add To Cart</button>
                 </div>
               </div>
             </div>

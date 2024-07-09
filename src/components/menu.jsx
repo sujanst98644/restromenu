@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react"
-import data from "../data"
-import UserContext from "./Context/UserContext"
-import { Link } from "react-router-dom"
-import Search from "./search"
-import Option from "./Options"
+import React, { useContext, useState } from "react";
+import data from "../data";
+import UserContext from "./Context/UserContext";
+import { Link } from "react-router-dom";
+import Search from "./search";
+import Option from "./Options";
 
 const Menu = () => {
   const [singleSelection, setSingleSelection] = useState(null);
-  const { dispatch } = useContext(UserContext);
+  const { dispatch  } = useContext(UserContext);
   const { User } = useContext(UserContext);
   const handleSelect = (getCurrentId) => {
     setSingleSelection(getCurrentId === singleSelection ? null : getCurrentId);
@@ -15,21 +15,23 @@ const Menu = () => {
   return (
     <>
       <Search />
-      <Option/>
+      <Option />
       <div className="h-full grid gap-4 mx-5 lg:grid-cols-4 text-green-700 items-center justify-center">
         {data
-          .filter((val) =>
-            val.cuisine.toLowerCase().includes(User.toLowerCase())
+          .filter(
+            (val) =>
+              val.cuisine.toLowerCase().includes(User.toLowerCase()) ||
+              val.type.toLowerCase().includes(User.toLowerCase())
           )
           .map((item) => {
             return (
               <div
-                className={` shadow-xl rounded-xl lg:h-[500px] lg:w-80 h-[200px] w-96 lg:grid lg:grid-row-7 flex flex-col items-center
-            ${
-              singleSelection === item.id
-                ? "transition-colors hover:bg-[#7AB2B2] duration-500 ease-in-out"
-                : "bg-[#EEF7FF]"
-            }`}
+                className={`shadow-xl rounded-xl lg:h-[500px] lg:w-80 h-[200px] w-96 lg:grid lg:grid-row-7 flex flex-col items-center
+          ${
+            singleSelection === item.id
+              ? "transition-colors hover:bg-[#7AB2B2] duration-500 ease-in-out"
+              : "bg-[#EEF7FF]"
+          }`}
                 onMouseEnter={() => {
                   handleSelect(item.id);
                 }}
@@ -61,7 +63,7 @@ const Menu = () => {
                       <div>
                         <Link to="/restromenu/caret">
                           <button
-                            className={`text-center transition duration-500 ease-in-out  border-2 bg-green-800 text-white rounded-xl px-4 py-2`}
+                            className={`text-center transition duration-500 ease-in-out border-2 bg-green-800 text-white rounded-xl px-4 py-2`}
                           >
                             Order Online
                           </button>
