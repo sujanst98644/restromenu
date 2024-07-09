@@ -7,6 +7,8 @@ function UserContextProvider({ children }) {
   };
   const [User, setUser] = useState("");
 
+  const [card, setCard] = useState({});
+
   const cartReducer = (state, action) => {
     switch (action.type) {
       case "Add_To_Cart":
@@ -64,7 +66,7 @@ function UserContextProvider({ children }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   return (
-    <UserContext.Provider value={{ User, setUser, state, dispatch }}>
+    <UserContext.Provider value={{ User, setUser, card, setCard, state, dispatch }}>
       {children}
     </UserContext.Provider>
   );

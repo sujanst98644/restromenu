@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import data from "../data";
 import UserContext from "./Context/UserContext";
-import { Link } from "react-router-dom";
 import Search from "./search";
 import Option from "./Options";
+import Caret from "./PopCart";
 
 const Menu = () => {
   const [singleSelection, setSingleSelection] = useState(null);
-  const { dispatch  } = useContext(UserContext);
-  const { User } = useContext(UserContext);
+  const [modal, setModal] =useState(false)
+  const {User, setCard  } = useContext(UserContext);
   const handleSelect = (getCurrentId) => {
     setSingleSelection(getCurrentId === singleSelection ? null : getCurrentId);
   };
@@ -16,6 +16,9 @@ const Menu = () => {
     <>
       <Search />
       <Option />
+      {modal && <Caret 
+      open={modal} close={()=>setModal(false)}
+      />}
       <div className="h-full grid gap-4 mx-5 lg:grid-cols-4 text-green-700 items-center justify-center">
         {data
           .filter(
@@ -61,23 +64,15 @@ const Menu = () => {
                     )}
                     {singleSelection === item.id ? (
                       <div>
-                        <Link to="/restromenu/caret">
                           <button
                             className={`text-center transition duration-500 ease-in-out border-2 bg-green-800 text-white rounded-xl px-4 py-2`}
+                            onClick={()=>{
+                              setModal(true)
+                              setCard(item)
+                            }}
                           >
                             Order Online
                           </button>
-                        </Link>
-                        <div className="space-x-3">
-                          <button>More</button>
-                          <button
-                            onClick={() => {
-                              dispatch({ type: "Add_To_Cart", payload: item });
-                            }}
-                          >
-                            Add order
-                          </button>
-                        </div>
                       </div>
                     ) : (
                       ""

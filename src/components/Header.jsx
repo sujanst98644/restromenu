@@ -5,7 +5,6 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const Header = () => {
   const {state} =useContext(UserContext)
-  console.log(state)
   const {cart} = state
   let itemCount = 0
   for (const [key, value] of Object.entries(cart)){
