@@ -50,7 +50,7 @@ export default [
         id: 6
     },
     {
-        img: `${process.env.PUBLIC_URL}/`,
+        img: `${process.env.PUBLIC_URL}/kotheyMomo.jpg`,
         type: "Momo",
         cuisine: "Chicken Kothey Momo",
         price: 8.99,
@@ -107,7 +107,7 @@ export default [
     },
 
     {
-        img: `${process.env.PUBLIC_URL}/`,
+        img: `${process.env.PUBLIC_URL}/milk_tea.jpg`,
         type: "Drinks",
         cuisine: "Milk Tea",
         price: 1.99,
@@ -147,7 +147,7 @@ export default [
         id: 18,
     },
     {
-        img: `${process.env.PUBLIC_URL}/`,
+        img: `${process.env.PUBLIC_URL}/chatpate.jpg`,
         type: "Starters",
         cuisine: "CHATPATE",
         price: 6.99,
@@ -155,7 +155,7 @@ export default [
         id: 19,
     },
     {
-        img: `${process.env.PUBLIC_URL}/`,
+        img: `${process.env.PUBLIC_URL}/aloo_jeera.jpg`,
         type: "Starters",
         cuisine: "Aloo Jeera",
         price: 6.99,
@@ -179,7 +179,7 @@ export default [
         id: 22,
     },
     {
-        img: `${process.env.PUBLIC_URL}/`,
+        img: `${process.env.PUBLIC_URL}/piro_aloo.jpg`,
         type: "Starters",
         cuisine: "Piro Alu",
         price: 6.99,
@@ -203,7 +203,7 @@ export default [
         id: 25,
     },
     {
-        img: `${process.env.PUBLIC_URL}/`,
+        img: `${process.env.PUBLIC_URL}/chicken_choila.jpg`,
         type: "Starters",
         cuisine: "Chicken Choila",
         price: 8.99,
@@ -234,6 +234,21 @@ export default [
         ingredients:"Bone-in duck fried and marinated with raw spices (spicy)",
         id: 29,
     },
-    
+    {
+        img: `${process.env.PUBLIC_URL}/dal-bhat-Nepal.jpg`,
+        type: "MainCourse",
+        cuisine: "Dal Bhat",
+        price: 8.99,
+        ingredients:"",
+        id: 29,
+    },
+    {
+        img: `${process.env.PUBLIC_URL}/Jhol_momo.jpg`,
+        type: "Momo",
+        cuisine: "Jhol Momo",
+        price: 8.99,
+        ingredients:"",
+        id: 29,
+    },
 
 ]

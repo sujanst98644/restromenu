@@ -19,7 +19,7 @@ const Search = ()=>{
             <FaSearch className="mx-2" />
             <input
               placeholder="Cuisines"
-              className="font-light rounded-xl focus:outline-none bg-slate-100 w-full h-full"
+              className="font-light rounded-xl focus:outline-none bg-slate-100 w-full h-full text-2xl"
               onChange={(e) => setName(e.target.value)}
             />
         </div>

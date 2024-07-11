@@ -6,7 +6,7 @@ function Layout() {
   return (
     <div className="flex flex-col font-sora text-white">
       <Header />
-      <hr className=" border-black mx-4"/>
+      <hr className=" border-black mx-4 lg:mx-20"/>
       <Outlet />
     </div>
   );

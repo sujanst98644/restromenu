@@ -1,12 +1,19 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useEffect } from "react";
 import UserContext from "./UserContext";
 
 function UserContextProvider({ children }) {
-  const initialState = {
-    cart: [],
+  //getting the cartdata from localstorage
+  const getData = () => {
+    let localCart = localStorage.getItem("Cart");
+    return localCart ? JSON.parse(localCart) : [];
   };
-  const [User, setUser] = useState("");
 
+  const initialState = {
+    cart: getData(),
+  };
+
+  const [User, setUser] = useState("");
+  // state for the modal component
   const [card, setCard] = useState({});
 
   const cartReducer = (state, action) => {
@@ -64,9 +71,15 @@ function UserContextProvider({ children }) {
   };
 
   const [state, dispatch] = useReducer(cartReducer, initialState);
+  // storing the cart in localstorage
+  useEffect(() => {
+    localStorage.setItem("Cart", JSON.stringify(state.cart));
+  }, [state.cart]);
 
   return (
-    <UserContext.Provider value={{ User, setUser, card, setCard, state, dispatch }}>
+    <UserContext.Provider
+      value={{ User, setUser, card, setCard, state, dispatch }}
+    >
       {children}
     </UserContext.Provider>
   );
