@@ -13,7 +13,7 @@ const Header = () => {
   }
   return (
     <header
-      className={`flex flex-row lg:grid-cols-3 items-center justify-between top-0 left-0 w-full lg:px-20 px-3`}
+      className={`flex flex-row lg:grid-cols-3 items-center justify-between top-0 left-0 w-full px-3`}
     >
       <Link to="/restromenu" className="flex flex-row items-center">
         <img
@@ -25,12 +25,6 @@ const Header = () => {
       </Link>
       <div className="font-sora flex justify-end">
         <ul className="flex flex-row lg:space-x-10 space-x-2 items-center">
-          {/* <Link to="#Home" className="hover:text-orange-200 text-black">
-            Menu
-          </Link>
-          <Link to="#blogs" className=" hover:text-green-200  text-black">
-            Order
-          </Link> */}
           <Link to="/restromenu/cart" className="flex m-6">
             <FaCartShopping className="text-3xl text-black lg:self-center" />
             <span className="text-white text-sm relative top-[-3px] right-[10px] bg-red-700 rounded-full h-5 w-5 text-center">

@@ -4,9 +4,9 @@ import Header from "./Header"
 
 function Layout() {
   return (
-    <div className="flex flex-col font-sora text-white">
+    <div className="flex flex-col font-sora text-white lg:mx-20">
       <Header />
-      <hr className=" border-black mx-4 lg:mx-20"/>
+      <hr className=" border-black mx-4"/>
       <Outlet />
     </div>
   );
