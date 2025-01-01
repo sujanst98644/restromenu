@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import {connectDB}  from "./DB/mongodb.js";
 import {UploadRoute} from "./routes/UploadRoute.js";
+import authRoute from "./routes/authRoute.js";
 
 dotenv.config();
 connectDB();
@@ -20,6 +21,7 @@ app.use(
 );
 
 app.use("/", UploadRoute);
+app.use("/auth", authRoute);
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => {

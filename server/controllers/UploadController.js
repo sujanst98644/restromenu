@@ -7,7 +7,7 @@ export const uploadController = async (req, res) => {
   const image = await cloudinary.uploader.upload(
     req.file.path,
     {
-      folder: "dev_setups",
+      folder: "Icecream",
     },
     (err, result) => {
       if (err) {
